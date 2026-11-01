@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 45" fill="none">
+  <!-- Washi tape with jagged torn ends and soft translucent wash -->
+  <defs>
+    <pattern id="washi-dots" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1" fill="rgba(255,255,255,0.45)"/>
+    </pattern>
+  </defs>
+  <path d="M0 5 L6 0 L8 6 L14 1 L16 7 L20 2 L200 6 L196 12 L200 18 L195 24 L199 30 L194 36 L198 42 L193 45 L0 41 L5 34 L1 27 L6 20 L0 14 Z" 
+        fill="#F99FA9" fill-opacity="0.75"/>
+  <path d="M0 5 L6 0 L8 6 L14 1 L16 7 L20 2 L200 6 L196 12 L200 18 L195 24 L199 30 L194 36 L198 42 L193 45 L0 41 L5 34 L1 27 L6 20 L0 14 Z" 
+        fill="url(#washi-dots)"/>
+</svg>

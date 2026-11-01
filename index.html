@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yasmin Ramos ♡ Portfólio Pessoal</title>
+  <meta name="description" content="Portfólio pessoal e criativo de Yasmin Ramos — Estudante de Informática, assistente jurídica e mente curiosa explorando o universo digital.">
+  
+  <!-- Favicon: Cute Pixel Ladybug -->
+  <link rel="icon" type="image/svg+xml" href="assets/svg/ladybug-pixel.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       LADYBUG CURSOR FOLLOWER
+       Acompanha suavemente o cursor sem bloquear interações
+       ======================================================================== -->
+  <div id="ladybug-follower" aria-hidden="true">
+    <img src="assets/svg/ladybug-pixel.svg" alt="Joaninha rosa" class="ladybug-sprite">
+  </div>
+
+  <!-- Ambient Twinkling Stars Container -->
+  <div id="sparkle-container" class="sparkle-canvas-container" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       DISCREET CREATIVE NAVIGATION (SCRAPBOOK BOOKMARK DOCK)
+       Navegação discreta e integrada ao design, sem menu corporativo rígido
+       ======================================================================== -->
+  <header class="scrapbook-nav" role="banner">
+    <nav class="nav-bookmark-pill" aria-label="Navegação do site">
+      <ul class="nav-links-menu">
+        <li class="nav-link-item"><a href="#inicio" class="active"><span>Início</span></a></li>
+        <li class="nav-link-item"><a href="#sobre"><span>Sobre mim</span></a></li>
+        <li class="nav-link-item"><a href="#projetos"><span>Projetos</span></a></li>
+        <li class="nav-link-item"><a href="#contato"><span>Contato</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Theme Switcher Button (Modo Claro / Modo Escuro) -->
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema claro e escuro" title="Alternar tema">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </header>
+
+  <!-- ========================================================================
+       SEÇÃO: INÍCIO (HERO / APRESENTAÇÃO VISUAL MARCANTE)
+       ======================================================================== -->
+  <main id="main-content">
+    <section id="inicio" class="hero-section" aria-label="Apresentação inicial">
+      <div class="hero-container">
+
+        <!-- Coluna Esquerda: Tipografia Expressiva, Apresentação e Interesses -->
+        <div class="hero-content">
+          
+          <!-- Selo / Etiqueta Scrapbook -->
+          <div class="intro-badge-wrapper">
+            <span class="intro-badge">
+              <span class="intro-sparkle">✦</span>
+              <span>meu universo digital</span>
+              <span class="intro-sparkle">✦</span>
+            </span>
+          </div>
+
+          <!-- Título Principal com Nome -->
+          <div class="hero-title-group">
+            <h1 class="hero-title">
+              <span class="title-first">Yasmin</span>
+              <span class="title-last">Ramos</span>
+            </h1>
+            <img src="assets/svg/sparkle-star.svg" alt="Brilho decorativo" class="title-sticker-star sticker-interactive" title="Brilho Y2K ♡">
+          </div>
+
+          <!-- Frase Manuscrita de Introdução -->
+          <div class="hero-handwritten-note">
+            <span>estudante de informática &amp; mente criativa</span>
+            <span style="font-size: 1.3rem;">🌸</span>
+          </div>
+
+          <!-- Cartão Scrapbook com Apresentação -->
+          <div class="hero-bio-card">
+            <div class="washi-tape-top" aria-hidden="true"></div>
+            <p class="hero-bio-text">
+              Olá! Sou estudante do curso <strong>Técnico em Informática na Raphael Di Santo</strong> (Campinas–SP) 
+              e atuo como assistente jurídica. Uma pessoa curiosa, criativa e comunicativa explorando 
+              o mundo da tecnologia para criar experiências autênticas e cheias de identidade.
+            </p>
+          </div>
+
+          <!-- Tags de Interesses Pessoais (Scrapbook Stickers) -->
+          <div class="hero-interest-tags" aria-label="Interesses e gostos pessoais">
+            <span class="interest-tag sticker-interactive">🎮 videogame</span>
+            <span class="interest-tag sticker-interactive">🧶 crochê</span>
+            <span class="interest-tag sticker-interactive">📖 livros</span>
+            <span class="interest-tag sticker-interactive">⚡ pokémon</span>
+            <span class="interest-tag sticker-interactive">🎵 trap &bull; k-pop &bull; pop</span>
+            <span class="interest-tag sticker-interactive">📍 campinas - sp</span>
+          </div>
+
+          <!-- Links Rápidos Autorizados (Apenas GitHub e E-mail) -->
+          <div class="hero-actions">
+            <a href="https://github.com/YasminBiancaa" target="_blank" rel="noopener noreferrer" class="btn-scrapbook-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>github.com/YasminBiancaa</span>
+            </a>
+
+            <a href="mailto:yasminbiancaramos29@gmail.com" class="btn-scrapbook-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>enviar e-mail</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Coluna Direita: O Quadro Scrapbook (Polaroid Interativo, Paleta & Adesivos) -->
+        <div class="hero-visual-canvas">
+          <div class="scrapbook-board" role="region" aria-label="Quadro Scrapbook de Yasmin">
+            
+            <!-- Paleta de Cores Pessoal (Inspirada diretamente no Moodboard) -->
+            <div class="moodboard-palette-card sticker-interactive" title="Clique nas cores para copiar o código HEX!">
+              <svg class="paperclip-icon" viewBox="0 0 40 90" fill="none" aria-hidden="true">
+                <path d="M12 25 V68 C12 77 18 84 26 84 C34 84 37 77 37 68 V18 C37 8 28 2 19 2 C10 2 3 8 3 18 V65 C3 70 7 74 12 74 C17 74 21 70 21 65 V28" 
+                      stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="palette-card-header">
+                <span>paleta de cores ♡</span>
+              </div>
+              <div class="palette-swatches">
+                <div class="swatch" style="background-color: #2A1E1E;" data-hex="#2A1E1E" title="#2A1E1E (marrom escuro)"></div>
+                <div class="swatch" style="background-color: #503850;" data-hex="#503850" title="#503850 (roxo fechado)"></div>
+                <div class="swatch" style="background-color: #AA6581;" data-hex="#AA6581" title="#AA6581 (rosa médio)"></div>
+                <div class="swatch" style="background-color: #F99FA9;" data-hex="#F99FA9" title="#F99FA9 (rosa claro)"></div>
+                <div class="swatch" style="background-color: #FFC5C1;" data-hex="#FFC5C1" title="#FFC5C1 (rosa pastel)"></div>
+              </div>
+            </div>
+
+            <!-- Adesivo Superior: Laço de Fita Rosa (Moodboard) -->
+            <img src="assets/svg/cute-bow.svg" alt="Laço decorativo" class="sticker-bow-top sticker-interactive" title="Laço rosa ♡">
+
+            <!-- Moldura Polaroid Interativa (Alterna entre os avatares do moodboard!) -->
+            <div class="polaroid-frame" title="Clique na foto para trocar o avatar!">
+              <div class="washi-tape-corner" aria-hidden="true"></div>
+              
+              <div class="polaroid-image-wrapper">
+                <img id="polaroid-avatar-img" src="assets/images/avatar-pixel.png" alt="Avatar ilustrado de Yasmin Ramos">
+                
+                <!-- Bolinhas seletoras do avatar -->
+                <div class="polaroid-switcher" aria-label="Alternar ilustrações">
+                  <span class="switch-dot active" data-index="0" title="Versão Pixel Art"></span>
+                  <span class="switch-dot" data-index="1" title="Versão Anime"></span>
+                  <span class="switch-dot" data-index="2" title="Versão Chibi"></span>
+                </div>
+              </div>
+
+              <!-- Legenda Manuscrita da Polaroid -->
+              <div class="polaroid-caption">
+                <span id="polaroid-avatar-caption">yasmin . pixel edition <span class="polaroid-caption-tag">pixel art</span></span>
+                <span>♡</span>
+              </div>
+            </div>
+
+            <!-- Adesivo Decorativo Inferior Esquerdo: "dream big ♡" (Moodboard) -->
+            <div class="sticker-dream-big sticker-interactive" title="dream big ♡">
+              dream big ♡
+            </div>
+
+            <!-- Adesivo Carimbo Inferior Direito: Joaninha Rosa (Moodboard) -->
+            <div class="sticker-ladybug-stamp sticker-interactive" title="Clique na joaninha!">
+              <img src="assets/images/ladybug-transparent.png" alt="Carimbo de joaninha rosa">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Indicador sutil de rolagem -->
+      <a href="#sobre" class="scroll-indicator-wrap" aria-label="Rolar para Sobre mim">
+        <span>conhecer mais ♡</span>
+        <span class="scroll-arrow-icon">↴</span>
+      </a>
+    </section>
+
+    <!-- ========================================================================
+         SEÇÃO: SOBRE MIM (HISTÓRIA, FORMAÇÃO, PERSONALIDADE E INTERESSES)
+         ======================================================================== -->
+    <section id="sobre" class="scrapbook-section" aria-label="Sobre mim">
+      <div class="section-header">
+        <span class="section-tag-badge">
+          <span>✦</span>
+          <span>quem sou eu</span>
+          <span>✦</span>
+        </span>
+        <h2 class="section-heading">Sobre <span class="highlight">mim</span> ♡</h2>
+        <p class="section-subheading">estudante, criativa e curiosa pelo universo da tecnologia</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Coluna Esquerda: Nota Principal de Apresentação -->
+        <div class="about-note-card">
+          <div class="about-washi-tape" aria-hidden="true"></div>
+          
+          <p class="about-text-lead">
+            Olá! Meu nome é <strong>Yasmin Ramos</strong>. Sou estudante do curso <strong>Técnico em Informática na escola Raphael Di Santo</strong>, em Campinas – SP.
+          </p>
+          
+          <p class="about-text-body">
+            Sou uma pessoa <strong>curiosa, criativa, comunicativa e determinada</strong>. Tenho paixão genuína por aprender coisas novas, debater ideias com diferentes perspectivas, colaborar de maneira ativa em equipe e assumir responsabilidades e desafios com entusiasmo.
+          </p>
+
+          <p class="about-text-body">
+            Acredito que a tecnologia se torna verdadeiramente fascinante quando conecta empatia, criatividade visual e funcionalidade prática. Cada linha de código e projeto que desenvolvo reflete essa busca por autenticidade e propósito.
+          </p>
+
+          <!-- Traços de Personalidade (Badges) -->
+          <div class="traits-container" aria-label="Características pessoais">
+            <span class="trait-badge sticker-interactive">💡 Curiosa</span>
+            <span class="trait-badge sticker-interactive">🎨 Criativa</span>
+            <span class="trait-badge sticker-interactive">💬 Comunicativa</span>
+            <span class="trait-badge sticker-interactive">🎯 Determinada</span>
+            <span class="trait-badge sticker-interactive">🤝 Trabalho em Equipe</span>
+            <span class="trait-badge sticker-interactive">✨ Liderança &amp; Foco</span>
+          </div>
+
+          <!-- Banner de Hobbies e Tempo Livre -->
+          <div class="hobbies-scrapbook-banner" aria-label="No meu tempo livre">
+            <span class="hobbies-banner-label">no meu tempo livre ♡</span>
+            <div class="hobbies-icons-group">
+              <span class="hobby-pill sticker-interactive">🎮 videogame</span>
+              <span class="hobby-pill sticker-interactive">📖 ler</span>
+              <span class="hobby-pill sticker-interactive">🧶 fazer crochê</span>
+              <span class="hobby-pill sticker-interactive">📺 desenhos &amp; séries</span>
+              <span class="hobby-pill sticker-interactive">⚡ pokémon</span>
+              <span class="hobby-pill sticker-interactive">🎵 trap &bull; k-pop &bull; pop</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Cartões de Experiência e Interesses em TI -->
+        <div class="about-side-stack">
+          
+          <!-- Cartão: Atuação Profissional (Assistente Jurídica) -->
+          <div class="experience-scrapbook-card">
+            <svg class="paperclip-top-right" viewBox="0 0 40 90" fill="none" aria-hidden="true">
+              <path d="M12 25 V68 C12 77 18 84 26 84 C34 84 37 77 37 68 V18 C37 8 28 2 19 2 C10 2 3 8 3 18 V65 C3 70 7 74 12 74 C17 74 21 70 21 65 V28" 
+                    stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="card-mini-label">EXPERIÊNCIA ATUAL</span>
+            <h3 class="card-title">Assistente Jurídica</h3>
+            <p class="card-subtitle">empresa de créditos estressados</p>
+            <p class="card-description">
+              Atuo na atualização cuidadosa de informações e dados em sistemas corporativos internos e na elaboração de <strong>Instrumentos de Trabalho (ITs)</strong>. Uma rotina dinâmica que desenvolve diariamente minha organização meticulosa, processos estruturados, comunicação interpessoal e responsabilidade com entregas.
+            </p>
+          </div>
+
+          <!-- Cartão: Áreas de Interesse em TI -->
+          <div class="interests-scrapbook-card">
+            <span class="card-mini-label">ESTUDOS &amp; FOCO</span>
+            <h3 class="card-title">Interesses em Tecnologia</h3>
+            <p class="card-subtitle">áreas que mais me encantam na TI</p>
+            
+            <div class="tech-interests-grid">
+              <div class="tech-interest-item sticker-interactive">
+                <span class="item-icon">💻</span>
+                <span>Desenvolvimento de Software</span>
+              </div>
+              <div class="tech-interest-item sticker-interactive">
+                <span class="item-icon">🏛️</span>
+                <span>Governança de TI</span>
+              </div>
+              <div class="tech-interest-item sticker-interactive">
+                <span class="item-icon">✨</span>
+                <span>UX/UI Design</span>
+              </div>
+              <div class="tech-interest-item sticker-interactive">
+                <span class="item-icon">🤖</span>
+                <span>Inteligência Artificial</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SEÇÃO: PROJETOS (GALERIA SCRAPBOOK PERSONALIZADA)
+         ======================================================================== -->
+    <section id="projetos" class="scrapbook-section" aria-label="Projetos">
+      <div class="section-header">
+        <span class="section-tag-badge">
+          <span>✦</span>
+          <span>galeria de criações</span>
+          <span>✦</span>
+        </span>
+        <h2 class="section-heading">Meus <span class="highlight">Projetos</span> ✦</h2>
+        <p class="section-subheading">espaço onde ideias ganham vida em código, gamificação e jogos</p>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- PROJETO 1: PULIN -->
+        <article class="project-card">
+          <div class="project-washi-tape" aria-hidden="true"></div>
+          
+          <div class="project-preview-wrap">
+            <a href="https://pulin-five.vercel.app/" target="_blank" rel="noopener noreferrer" title="Abrir projeto Pulin em nova aba">
+              <img src="assets/svg/project-pulin.svg" alt="Prévia da interface da plataforma gamificada Pulin">
+            </a>
+          </div>
+
+          <div class="project-content">
+            <div class="project-header-row">
+              <h3 class="project-title">Pulin</h3>
+              <span class="project-badge">Cadastro Gamificado</span>
+            </div>
+
+            <p class="project-description">
+              Plataforma de cadastro gamificado, com etapas estruturadas e sistema dinâmico de recompensas. O usuário pode desbloquear moedas e um avatar exclusivo ao concluir o cadastro.
+            </p>
+
+            <div class="project-actions">
+              <a href="https://pulin-five.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-access">
+                <span>Acessar Pulin</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJETO 2: NUMCRUSH -->
+        <article class="project-card">
+          <div class="project-washi-tape" aria-hidden="true"></div>
+          
+          <div class="project-preview-wrap">
+            <a href="https://numberbraker.vercel.app/" target="_blank" rel="noopener noreferrer" title="Abrir jogo NumCrush em nova aba">
+              <img src="assets/svg/project-numcrush.svg" alt="Prévia do jogo Destruidor de Números - NumCrush">
+            </a>
+          </div>
+
+          <div class="project-content">
+            <div class="project-header-row">
+              <h3 class="project-title">NumCrush</h3>
+              <span class="project-badge">Destruidor de Números</span>
+            </div>
+
+            <p class="project-description">
+              Jogo dinâmico chamado Destruidor de Números, com progressão por fases, pontuação em tempo real, moedas, ranking competitivo, conquistas desbloqueáveis e loja de itens.
+            </p>
+
+            <div class="project-actions">
+              <a href="https://numberbraker.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-access">
+                <span>Jogar NumCrush</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3: PREPARADO PARA NOVOS PROJETOS (FUTURO) -->
+        <div class="project-future-card" role="region" aria-label="Futuros projetos">
+          <div class="future-icon-badge">✨</div>
+          <h3 class="future-card-title">Em breve mais ideias...</h3>
+          <p class="future-card-text">
+            novos projetos, experimentos e códigos estão sendo criados para preencher esse espaço ♡
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SEÇÃO: CONTATO (CARTÃO POSTAL SCRAPBOOK)
+         ======================================================================== -->
+    <section id="contato" class="scrapbook-section" aria-label="Contato">
+      <div class="section-header">
+        <span class="section-tag-badge">
+          <span>✦</span>
+          <span>vamos conversar?</span>
+          <span>✦</span>
+        </span>
+        <h2 class="section-heading">Entre em <span class="highlight">Contato</span> ♡</h2>
+        <p class="section-subheading">fique à vontade para me mandar uma mensagem ou acompanhar meus códigos</p>
+      </div>
+
+      <div class="contact-section-container">
+        <div class="contact-postcard">
+          
+          <!-- Selo Postal & Carimbo de Correio -->
+          <div class="postcard-stamp-wrap" aria-hidden="true">
+            <div class="postmark-seal">
+              <span>CAMPINAS</span>
+              <span>• SP •</span>
+              <span>2026</span>
+            </div>
+            <img src="assets/svg/stamp-postage.svg" alt="Selo postal com joaninha" class="postcard-stamp-img" title="Selo postal da Yasmin ♡">
+          </div>
+
+          <div class="postcard-message-area">
+            <h3 class="postcard-greeting">Oi! Vamos trocar uma ideia?</h3>
+            <p class="postcard-text">
+              Estou sempre animada para aprender, debater tecnologia e trocar experiências sobre desenvolvimento e design. 
+              Você pode me enviar um e-mail diretamente ou acompanhar meus repositórios no GitHub!
+            </p>
+          </div>
+
+          <!-- Cards de Ação Direta (Apenas E-mail e GitHub) -->
+          <div class="postcard-links-grid">
+            
+            <!-- Link: E-mail -->
+            <div class="contact-action-card">
+              <div class="contact-info-col">
+                <span class="contact-type-label">E-MAIL</span>
+                <span class="contact-value-text">yasminbiancaramos29@gmail.com</span>
+              </div>
+              <div style="display: flex; gap: 0.4rem;">
+                <a href="mailto:yasminbiancaramos29@gmail.com" class="contact-btn-icon" title="Enviar e-mail para Yasmin" aria-label="Enviar e-mail para Yasmin">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                </a>
+                <button id="copy-email-action" class="contact-btn-icon" style="background: var(--c-pink-medium);" title="Copiar e-mail" aria-label="Copiar endereço de e-mail">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Link: GitHub -->
+            <a href="https://github.com/YasminBiancaa" target="_blank" rel="noopener noreferrer" class="contact-action-card">
+              <div class="contact-info-col">
+                <span class="contact-type-label">GITHUB</span>
+                <span class="contact-value-text">github.com/YasminBiancaa</span>
+              </div>
+              <span class="contact-btn-icon" title="Abrir perfil no GitHub" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </span>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER (RODAPÉ SCRAPBOOK)
+       ======================================================================== -->
+  <footer class="scrapbook-footer" role="contentinfo">
+    <p class="footer-scrapbook-note">
+      <span>feito com carinho &amp; código por Yasmin Ramos</span>
+      <span>♡</span>
+    </p>
+    <p class="footer-copy">
+      Campinas – SP &bull; 2026 &bull; todos os direitos reservados
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/sparkles.js"></script>
+  <script src="js/ladybug-cursor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

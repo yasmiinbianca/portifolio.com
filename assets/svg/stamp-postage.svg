@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" fill="none">
+  <!-- Perforated Stamp Edge -->
+  <path d="M 10 10 
+           h 10 a 3 3 0 0 0 6 0 h 10 a 3 3 0 0 0 6 0 h 10 a 3 3 0 0 0 6 0 h 10 a 3 3 0 0 0 6 0 h 10
+           v 10 a 3 3 0 0 0 0 6 v 10 a 3 3 0 0 0 0 6 v 10 a 3 3 0 0 0 0 6 v 10 a 3 3 0 0 0 0 6 v 10 a 3 3 0 0 0 0 6 v 10
+           h -10 a 3 3 0 0 0 -6 0 h -10 a 3 3 0 0 0 -6 0 h -10 a 3 3 0 0 0 -6 0 h -10 a 3 3 0 0 0 -6 0 h -10
+           v -10 a 3 3 0 0 0 0 -6 v -10 a 3 3 0 0 0 0 -6 v -10 a 3 3 0 0 0 0 -6 v -10 a 3 3 0 0 0 0 -6 v -10 a 3 3 0 0 0 0 -6 v -10 Z"
+        fill="#FFEFF2" stroke="#AA6581" stroke-width="1.5" />
+  
+  <!-- Stamp Inner Art -->
+  <rect x="18" y="18" width="64" height="84" rx="4" fill="#FFFFFF" stroke="rgba(170,101,129,0.3)" />
+  
+  <!-- Mini Ladybug or Heart inside Stamp -->
+  <circle cx="50" cy="50" r="18" fill="#F99FA9" />
+  <circle cx="44" cy="46" r="3.5" fill="#2A1E1E" />
+  <circle cx="56" cy="46" r="3.5" fill="#2A1E1E" />
+  <circle cx="50" cy="58" r="3" fill="#2A1E1E" />
+  
+  <text x="50" y="82" fill="#503850" font-family="'Silkscreen', monospace" font-size="8" font-weight="bold" text-anchor="middle">CORREIO ♡</text>
+  <text x="50" y="93" fill="#AA6581" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" text-anchor="middle">Campinas • SP</text>
+</svg>

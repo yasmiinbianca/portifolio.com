@@ -1,0 +1,1033 @@
+/* ==========================================================================
+   MAIN STYLESHEET — YASMIN RAMOS PORTFOLIO
+   Digital Scrapbook, Y2K Editorial & Whimsical Aesthetic
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Shrikhand&family=Silkscreen:wght@400;700&display=swap');
+@import url('./variables.css');
+
+/* --- Reset & Global Defaults --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--theme-text-main);
+  background-color: var(--theme-bg);
+  min-height: 100vh;
+  line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
+}
+
+/* Scrapbook Paper Background Pattern */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+  background-image: 
+    radial-gradient(var(--theme-pattern-dot) 1.5px, transparent 1.5px),
+    linear-gradient(to right, rgba(255, 197, 193, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 197, 193, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px, 48px 48px;
+}
+
+/* Subtle Vignette & Y2K Glow */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(249, 159, 169, 0.12), transparent 50%),
+              radial-gradient(circle at 15% 85%, rgba(170, 101, 129, 0.09), transparent 50%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Selection Highlight */
+::selection {
+  background-color: var(--c-pink-pastel);
+  color: var(--c-brown-dark);
+}
+
+/* ==========================================================================
+   DISCREET CREATIVE NAVIGATION (SCRAPBOOK BOOKMARK DOCK)
+   Integrated seamlessly with the scrapbook theme, not a corporate navbar
+   ========================================================================== */
+
+.scrapbook-nav {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-bookmark-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--theme-nav-bg);
+  backdrop-filter: blur(10px);
+  border: 1.5px dashed var(--theme-nav-border);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 16px rgba(42, 30, 30, 0.08);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--theme-text-main);
+  transition: all var(--transition-smooth);
+}
+
+.nav-bookmark-pill:hover {
+  transform: translateY(-2px);
+  border-style: solid;
+  border-color: var(--c-pink-medium);
+  box-shadow: 0 6px 20px rgba(170, 101, 129, 0.2);
+}
+
+.nav-links-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  list-style: none;
+}
+
+.nav-link-item a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--theme-text-muted);
+  transition: all var(--transition-smooth);
+  position: relative;
+}
+
+.nav-link-item a:hover,
+.nav-link-item a.active {
+  color: var(--theme-text-main);
+  background: rgba(249, 159, 169, 0.22);
+}
+
+.nav-link-item a.active::after {
+  content: "♡";
+  font-size: 0.65rem;
+  color: var(--c-pink-medium);
+  margin-left: 0.15rem;
+}
+
+/* Theme Toggle Button (Cute Star/Moon Scrapbook Badge) */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--theme-nav-bg);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid var(--theme-nav-border);
+  box-shadow: 0 4px 14px rgba(42, 30, 30, 0.08);
+  cursor: pointer;
+  transition: all var(--transition-spring);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1) rotate(15deg);
+  border-color: var(--c-pink-medium);
+  box-shadow: 0 6px 18px rgba(170, 101, 129, 0.25);
+}
+
+.theme-icon {
+  font-size: 1.15rem;
+  transition: transform 0.4s ease;
+}
+
+/* ==========================================================================
+   LADYBUG CURSOR FOLLOWER
+   Gentle, smooth interpolation, does not interfere with clicks
+   ========================================================================== */
+
+#ladybug-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 99999;
+  will-change: transform;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.ladybug-sprite {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(42, 30, 30, 0.22));
+  transform-origin: center center;
+  transition: transform 0.12s linear;
+}
+
+/* Crawl flutter animation when moving */
+.ladybug-sprite.crawling {
+  animation: ladybug-wiggle 0.22s infinite alternate ease-in-out;
+}
+
+@keyframes ladybug-wiggle {
+  0% { transform: scale(1, 0.95) rotate(-3deg); }
+  100% { transform: scale(0.97, 1.02) rotate(3deg); }
+}
+
+/* Touch fallback: discreet adorable resting badge in bottom corner */
+@media (hover: none) and (pointer: coarse) {
+  #ladybug-follower {
+    position: fixed;
+    top: auto;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    left: auto;
+    width: 38px;
+    height: 38px;
+    transform: none;
+    pointer-events: auto;
+    cursor: pointer;
+    animation: ladybug-float 3s infinite ease-in-out;
+  }
+}
+
+@keyframes ladybug-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(4deg); }
+}
+
+/* ==========================================================================
+   SPARKLES & TWINKLING STARS
+   Delicate, lightweight, non-distracting
+   ========================================================================== */
+
+.sparkle-canvas-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.ambient-star {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform, opacity;
+  animation: star-twinkle 3.5s infinite ease-in-out;
+}
+
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.7) rotate(0deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.15) rotate(180deg);
+  }
+}
+
+/* ==========================================================================
+   HERO / INÍCIO SECTION
+   A striking visual universe introducing Yasmin Ramos
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem 4rem;
+  z-index: 2;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+/* Left Column: Typography & Story */
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+/* Scrapbook Intro Badge */
+.intro-badge-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.intro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--c-pink-pastel);
+  color: var(--c-brown-dark);
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 10px rgba(42, 30, 30, 0.08);
+  border: 1px dashed rgba(80, 56, 80, 0.35);
+  transform: rotate(-1.5deg);
+  transition: transform var(--transition-spring);
+}
+
+.intro-badge:hover {
+  transform: rotate(0deg) scale(1.04);
+}
+
+.intro-sparkle {
+  color: var(--c-pink-medium);
+  font-size: 0.85rem;
+  animation: pulse-soft 2s infinite ease-in-out;
+}
+
+/* Main Name Title */
+.hero-title-group {
+  position: relative;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -1.5px;
+  color: var(--theme-text-main);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .title-first {
+  display: block;
+  position: relative;
+}
+
+.hero-title .title-last {
+  display: block;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--c-pink-medium);
+  position: relative;
+}
+
+[data-theme="dark"] .hero-title .title-last {
+  color: var(--c-pink-light);
+  text-shadow: 0 0 20px rgba(249, 159, 169, 0.25);
+}
+
+/* Tiny bow or flower sticker on the title */
+.title-sticker-star {
+  position: absolute;
+  top: -0.6rem;
+  right: -1.2rem;
+  width: 32px;
+  height: 32px;
+  animation: float-gentle 4s infinite ease-in-out;
+  cursor: pointer;
+  transition: transform var(--transition-spring);
+}
+
+.title-sticker-star:hover {
+  transform: scale(1.3) rotate(25deg);
+}
+
+/* Handwritten Note Subtitle */
+.hero-handwritten-note {
+  font-family: var(--font-handwriting);
+  font-size: 1.65rem;
+  line-height: 1.25;
+  color: var(--c-purple-deep);
+  transform: rotate(-1deg);
+  margin-top: -0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+[data-theme="dark"] .hero-handwritten-note {
+  color: var(--c-pink-pastel);
+}
+
+/* Lead Bio Paragraph */
+.hero-bio-card {
+  position: relative;
+  background: var(--theme-card-bg);
+  border: 1px solid var(--theme-card-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--theme-shadow-paper);
+  margin-top: 0.5rem;
+  max-width: 540px;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.hero-bio-card:hover {
+  box-shadow: var(--theme-shadow-lift);
+  transform: translateY(-2px);
+}
+
+/* Washi tape over bio card */
+.washi-tape-top {
+  position: absolute;
+  top: -12px;
+  left: 28px;
+  width: 90px;
+  height: 22px;
+  background: var(--c-pink-light);
+  opacity: var(--theme-washi-opacity);
+  transform: rotate(-2deg);
+  border-left: 2px dashed rgba(42, 30, 30, 0.2);
+  border-right: 2px dashed rgba(42, 30, 30, 0.2);
+  box-shadow: 0 2px 4px rgba(42, 30, 30, 0.08);
+}
+
+.hero-bio-text {
+  font-size: 1.02rem;
+  color: var(--theme-text-main);
+  line-height: 1.65;
+}
+
+.hero-bio-text strong {
+  color: var(--c-pink-medium);
+  font-weight: 600;
+}
+
+[data-theme="dark"] .hero-bio-text strong {
+  color: var(--c-pink-light);
+}
+
+/* Interest Pills / Personality Tags */
+.hero-interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.interest-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 197, 193, 0.35);
+  border: 1px solid rgba(170, 101, 129, 0.3);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--theme-text-main);
+  transition: all var(--transition-spring);
+  cursor: default;
+}
+
+.interest-tag:hover {
+  background: var(--c-pink-pastel);
+  transform: translateY(-2px) scale(1.03);
+  border-color: var(--c-pink-medium);
+}
+
+/* CTAs and Discreet Links */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.btn-scrapbook-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--c-purple-deep);
+  color: #FFFFFF;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(80, 56, 80, 0.28);
+  border: 1.5px solid transparent;
+  transition: all var(--transition-spring);
+}
+
+.btn-scrapbook-primary:hover {
+  background: var(--c-brown-dark);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(42, 30, 30, 0.35);
+}
+
+.btn-scrapbook-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--theme-card-bg);
+  color: var(--theme-text-main);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: 1.5px dashed var(--c-pink-medium);
+  box-shadow: 0 4px 12px rgba(42, 30, 30, 0.06);
+  transition: all var(--transition-spring);
+}
+
+.btn-scrapbook-secondary:hover {
+  border-style: solid;
+  border-color: var(--c-purple-deep);
+  background: rgba(249, 159, 169, 0.2);
+  transform: translateY(-2px);
+}
+
+/* --- Right Column: The Scrapbook Canvas & Moodboard Showcase --- */
+.hero-visual-canvas {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 480px;
+}
+
+/* Scrapbook Layered Base */
+.scrapbook-board {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  perspective: 1000px;
+}
+
+/* Main Polaroid Card */
+.polaroid-frame {
+  position: relative;
+  background: #FFFFFF;
+  padding: 14px 14px 44px 14px;
+  border-radius: 6px;
+  box-shadow: 0 16px 36px rgba(42, 30, 30, 0.16), 0 4px 10px rgba(42, 30, 30, 0.08);
+  border: 1px solid rgba(42, 30, 30, 0.06);
+  transform: rotate(2.5deg);
+  transition: transform var(--transition-spring), box-shadow var(--transition-smooth);
+  z-index: 3;
+}
+
+.polaroid-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 0 22px 48px rgba(42, 30, 30, 0.22);
+}
+
+[data-theme="dark"] .polaroid-frame {
+  background: #2D1F2B;
+  border-color: rgba(249, 159, 169, 0.2);
+}
+
+.polaroid-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #110B0E;
+}
+
+.polaroid-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.polaroid-frame:hover .polaroid-image-wrapper img {
+  transform: scale(1.04);
+}
+
+/* Avatar Switcher Dots inside polaroid */
+.polaroid-switcher {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  background: rgba(42, 30, 30, 0.6);
+  backdrop-filter: blur(4px);
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
+  z-index: 5;
+}
+
+.switch-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.switch-dot.active {
+  background: var(--c-pink-light);
+  transform: scale(1.2);
+}
+
+.polaroid-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-handwriting);
+  font-size: 1.35rem;
+  color: #2A1E1E;
+}
+
+[data-theme="dark"] .polaroid-caption {
+  color: #FFE6EB;
+}
+
+.polaroid-caption-tag {
+  font-family: var(--font-pixel);
+  font-size: 0.62rem;
+  background: var(--c-pink-light);
+  color: var(--c-brown-dark);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Washi Tape on Polaroid Corner */
+.washi-tape-corner {
+  position: absolute;
+  top: -14px;
+  right: -10px;
+  width: 85px;
+  height: 26px;
+  background: rgba(249, 159, 169, 0.85);
+  transform: rotate(42deg);
+  border-left: 2px dashed rgba(42, 30, 30, 0.25);
+  border-right: 2px dashed rgba(42, 30, 30, 0.25);
+  box-shadow: 0 2px 6px rgba(42, 30, 30, 0.12);
+  z-index: 6;
+  pointer-events: none;
+}
+
+/* Palette Swatch Card (Direct homage to the moodboard!) */
+.moodboard-palette-card {
+  position: absolute;
+  top: -2.2rem;
+  left: -2.8rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(170, 101, 129, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  box-shadow: 0 8px 20px rgba(42, 30, 30, 0.12);
+  transform: rotate(-6deg);
+  z-index: 4;
+  transition: transform var(--transition-spring);
+}
+
+.moodboard-palette-card:hover {
+  transform: rotate(-2deg) scale(1.05);
+  z-index: 10;
+}
+
+[data-theme="dark"] .moodboard-palette-card {
+  background: #251922;
+  border-color: rgba(249, 159, 169, 0.3);
+}
+
+.palette-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-family: var(--font-handwriting);
+  font-size: 0.95rem;
+  color: var(--c-purple-deep);
+  font-weight: 700;
+}
+
+[data-theme="dark"] .palette-card-header {
+  color: var(--c-pink-pastel);
+}
+
+.paperclip-icon {
+  width: 14px;
+  height: 32px;
+  position: absolute;
+  top: -14px;
+  right: 14px;
+  color: #D4AF37; /* Rose-gold / Brass */
+  filter: drop-shadow(0 2px 2px rgba(42, 30, 30, 0.25));
+  z-index: 5;
+}
+
+.palette-swatches {
+  display: flex;
+  gap: 4px;
+}
+
+.swatch {
+  width: 22px;
+  height: 28px;
+  border-radius: 3px;
+  border: 1px solid rgba(42, 30, 30, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.swatch:hover {
+  transform: scale(1.2) translateY(-2px);
+}
+
+.swatch::after {
+  content: attr(data-hex);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-brown-dark);
+  color: #FFFFFF;
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  padding: 2px 4px;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.swatch:hover::after {
+  opacity: 1;
+}
+
+/* Secondary Sticker: "dream big ♡" */
+.sticker-dream-big {
+  position: absolute;
+  bottom: -1.5rem;
+  left: -1.8rem;
+  background: #FFFFFF;
+  border: 2px solid var(--c-pink-medium);
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-family: var(--font-handwriting);
+  font-size: 1.4rem;
+  color: var(--c-pink-medium);
+  box-shadow: 0 4px 12px rgba(170, 101, 129, 0.22);
+  transform: rotate(-4deg);
+  z-index: 5;
+  transition: transform var(--transition-spring);
+  cursor: pointer;
+}
+
+.sticker-dream-big:hover {
+  transform: rotate(0deg) scale(1.1);
+  background: var(--c-pink-pastel);
+  color: var(--c-brown-dark);
+}
+
+[data-theme="dark"] .sticker-dream-big {
+  background: #2D1F2B;
+  color: var(--c-pink-light);
+  border-color: var(--c-pink-light);
+}
+
+/* Pink Ladybug Badge on the Scrapbook */
+.sticker-ladybug-stamp {
+  position: absolute;
+  bottom: -1.8rem;
+  right: -1.5rem;
+  width: 68px;
+  height: 68px;
+  background: var(--c-pink-pastel);
+  border: 2px dashed var(--c-pink-medium);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(42, 30, 30, 0.14);
+  transform: rotate(12deg);
+  z-index: 5;
+  cursor: pointer;
+  transition: transform var(--transition-spring);
+}
+
+.sticker-ladybug-stamp:hover {
+  transform: rotate(24deg) scale(1.15);
+}
+
+.sticker-ladybug-stamp img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+/* Cute Bow Sticker at top */
+.sticker-bow-top {
+  position: absolute;
+  top: -2.2rem;
+  right: 1.2rem;
+  width: 54px;
+  height: 46px;
+  z-index: 5;
+  filter: drop-shadow(0 4px 6px rgba(42, 30, 30, 0.15));
+  animation: float-gentle 4s infinite ease-in-out;
+  cursor: pointer;
+  transition: transform var(--transition-spring);
+}
+
+.sticker-bow-top:hover {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+/* Pixel Sparkle Accents */
+.pixel-sparkle {
+  position: absolute;
+  pointer-events: none;
+  font-family: var(--font-pixel);
+  color: var(--c-pink-medium);
+  font-size: 1.2rem;
+  animation: pulse-soft 2.5s infinite ease-in-out;
+}
+
+/* Scroll Indicator */
+.scroll-indicator-wrap {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--theme-text-muted);
+  font-family: var(--font-pixel);
+  font-size: 0.68rem;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.scroll-indicator-wrap:hover {
+  opacity: 1;
+}
+
+.scroll-arrow-icon {
+  font-size: 0.9rem;
+  color: var(--c-pink-medium);
+  animation: bounce-subtle 1.8s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   ANIMATIONS & KEYFRAMES
+   ========================================================================== */
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-7px) rotate(3deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Tablets & Mobile Phones)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-bio-card {
+    max-width: 580px;
+    text-align: left;
+  }
+
+  .hero-handwritten-note {
+    justify-content: center;
+  }
+
+  .hero-interest-tags {
+    justify-content: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-visual-canvas {
+    min-height: 420px;
+    margin-top: 1rem;
+  }
+
+  .scrapbook-board {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 640px) {
+  .scrapbook-nav {
+    top: 0.6rem;
+    right: 0.6rem;
+    left: 0.6rem;
+    justify-content: space-between;
+    gap: 0.4rem;
+  }
+
+  .nav-bookmark-pill {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.72rem;
+    flex-grow: 1;
+    justify-content: center;
+    overflow-x: auto;
+  }
+
+  .nav-links-menu {
+    display: flex;
+    gap: 0.2rem;
+  }
+
+  .nav-link-item a {
+    padding: 0.3rem 0.45rem;
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+
+  .theme-toggle-btn {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+
+  .hero-section {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-handwritten-note {
+    font-size: 1.35rem;
+  }
+
+  .hero-bio-card {
+    padding: 1.1rem 1.2rem;
+  }
+
+  .hero-bio-text {
+    font-size: 0.95rem;
+  }
+
+  .polaroid-frame {
+    padding: 10px 10px 38px 10px;
+  }
+
+  .polaroid-image-wrapper {
+    height: 270px;
+  }
+
+  .moodboard-palette-card {
+    top: -1.8rem;
+    left: -0.8rem;
+    padding: 8px 10px;
+    transform: rotate(-4deg);
+  }
+
+  .swatch {
+    width: 18px;
+    height: 22px;
+  }
+
+  .sticker-dream-big {
+    left: -0.5rem;
+    bottom: -1.2rem;
+    font-size: 1.15rem;
+    padding: 4px 10px;
+  }
+
+  .sticker-ladybug-stamp {
+    right: -0.5rem;
+    bottom: -1.4rem;
+    width: 54px;
+    height: 54px;
+  }
+
+  .sticker-ladybug-stamp img {
+    width: 34px;
+    height: 34px;
+  }
+}

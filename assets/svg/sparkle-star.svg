@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none">
+  <defs>
+    <radialGradient id="star-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF5F7" />
+      <stop offset="50%" stop-color="#F99FA9" />
+      <stop offset="100%" stop-color="#AA6581" />
+    </radialGradient>
+  </defs>
+  <!-- 4-point Y2K star with smooth pinched curves -->
+  <path d="M30 2 Q30 22 10 30 Q30 38 30 58 Q30 38 50 30 Q30 22 30 2 Z" fill="url(#star-glow)"/>
+  <circle cx="30" cy="30" r="3" fill="#FFFFFF"/>
+</svg>

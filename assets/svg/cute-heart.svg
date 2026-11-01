@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- Cute Heart Sticker with white outline and glossy shine -->
+  <g filter="drop-shadow(0px 3px 5px rgba(42,30,30,0.18))">
+    <!-- Sticker white border -->
+    <path d="M40 70 C40 70 10 50 10 28 C10 16 19 8 30 8 C35 8 38 11 40 14 C42 11 45 8 50 8 C61 8 70 16 70 28 C70 50 40 70 40 70 Z" 
+          fill="#FFFFFF" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    <!-- Heart fill -->
+    <path d="M40 68 C40 68 12 49 12 28 C12 17 20 10 30 10 C35 10 38 13 40 16 C42 13 45 10 50 10 C60 10 68 17 68 28 C68 49 40 68 40 68 Z" 
+          fill="#AA6581"/>
+    <!-- Pixel / gloss highlight -->
+    <path d="M22 20 C20 24 20 28 22 32" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="28" cy="18" r="2" fill="#FFFFFF"/>
+  </g>
+</svg>

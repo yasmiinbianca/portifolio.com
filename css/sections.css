@@ -1,0 +1,820 @@
+/* ==========================================================================
+   EXPANDED SECTIONS STYLESHEET — YASMIN RAMOS PORTFOLIO
+   Sections: Sobre Mim, Projetos, Contato & Footer
+   Preserving color palette, typography, scrapbook textures and animations
+   ========================================================================== */
+
+/* --- Common Section Structure --- */
+.scrapbook-section {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  z-index: 2;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.section-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--c-pink-pastel);
+  color: var(--c-brown-dark);
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 10px rgba(42, 30, 30, 0.06);
+  border: 1px dashed rgba(80, 56, 80, 0.35);
+  transform: rotate(-1deg);
+  margin-bottom: 0.75rem;
+  transition: transform var(--transition-spring);
+}
+
+.section-tag-badge:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--theme-text-main);
+  letter-spacing: -1px;
+}
+
+.section-heading .highlight {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--c-pink-medium);
+}
+
+[data-theme="dark"] .section-heading .highlight {
+  color: var(--c-pink-light);
+  text-shadow: 0 0 16px rgba(249, 159, 169, 0.25);
+}
+
+.section-subheading {
+  font-family: var(--font-handwriting);
+  font-size: 1.45rem;
+  color: var(--c-purple-deep);
+  margin-top: 0.25rem;
+  transform: rotate(-0.5deg);
+}
+
+[data-theme="dark"] .section-subheading {
+  color: var(--c-pink-pastel);
+}
+
+/* ==========================================================================
+   SEÇÃO 1: SOBRE MIM
+   ========================================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Main Scrapbook Note Card */
+.about-note-card {
+  position: relative;
+  background: var(--theme-card-bg);
+  border: 1px solid var(--theme-card-border);
+  border-radius: var(--radius-md);
+  padding: 2.2rem 2.2rem 2rem;
+  box-shadow: var(--theme-shadow-paper);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.about-note-card:hover {
+  box-shadow: var(--theme-shadow-lift);
+  transform: translateY(-2px);
+}
+
+/* Washi Tape Header */
+.about-washi-tape {
+  position: absolute;
+  top: -14px;
+  left: 36px;
+  width: 110px;
+  height: 26px;
+  background: var(--c-pink-light);
+  opacity: var(--theme-washi-opacity);
+  transform: rotate(-1.5deg);
+  border-left: 2px dashed rgba(42, 30, 30, 0.25);
+  border-right: 2px dashed rgba(42, 30, 30, 0.25);
+  box-shadow: 0 2px 4px rgba(42, 30, 30, 0.08);
+}
+
+.about-text-lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--theme-text-main);
+  margin-bottom: 1.25rem;
+}
+
+.about-text-lead strong {
+  color: var(--c-pink-medium);
+}
+
+[data-theme="dark"] .about-text-lead strong {
+  color: var(--c-pink-light);
+}
+
+.about-text-body {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--theme-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Personality Traits Pills */
+.traits-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.trait-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 197, 193, 0.35);
+  border: 1px solid rgba(170, 101, 129, 0.28);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--theme-text-main);
+  transition: all var(--transition-spring);
+}
+
+.trait-badge:hover {
+  background: var(--c-pink-pastel);
+  transform: translateY(-2px) scale(1.04);
+  border-color: var(--c-pink-medium);
+}
+
+/* Right Column: Work Experience & Hobbies Scrapbook Box */
+.about-side-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Professional Experience Card (Assistente Jurídica) */
+.experience-scrapbook-card {
+  position: relative;
+  background: var(--theme-card-bg);
+  border: 1px solid var(--theme-card-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--theme-shadow-paper);
+  transform: rotate(1deg);
+  transition: transform var(--transition-spring), box-shadow var(--transition-smooth);
+}
+
+.experience-scrapbook-card:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: var(--theme-shadow-lift);
+}
+
+.paperclip-top-right {
+  position: absolute;
+  top: -12px;
+  right: 28px;
+  width: 14px;
+  height: 32px;
+  color: #D4AF37;
+  filter: drop-shadow(0 2px 2px rgba(42, 30, 30, 0.25));
+}
+
+.card-mini-label {
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  color: var(--c-pink-medium);
+  letter-spacing: 0.5px;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+[data-theme="dark"] .card-mini-label {
+  color: var(--c-pink-light);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--theme-text-main);
+  margin-bottom: 0.35rem;
+}
+
+.card-subtitle {
+  font-family: var(--font-handwriting);
+  font-size: 1.15rem;
+  color: var(--theme-text-muted);
+  margin-bottom: 0.85rem;
+}
+
+.card-description {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--theme-text-main);
+}
+
+/* Tech Areas of Interest */
+.interests-scrapbook-card {
+  position: relative;
+  background: var(--theme-card-bg);
+  border: 1px solid var(--theme-card-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--theme-shadow-paper);
+  transform: rotate(-1deg);
+  transition: transform var(--transition-spring), box-shadow var(--transition-smooth);
+}
+
+.interests-scrapbook-card:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: var(--theme-shadow-lift);
+}
+
+.tech-interests-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.tech-interest-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(249, 159, 169, 0.14);
+  border: 1px solid rgba(170, 101, 129, 0.22);
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--theme-text-main);
+  transition: all var(--transition-spring);
+}
+
+.tech-interest-item:hover {
+  background: var(--c-pink-pastel);
+  transform: translateY(-2px);
+  border-color: var(--c-pink-medium);
+}
+
+.tech-interest-item .item-icon {
+  font-size: 1.15rem;
+}
+
+/* Hobbies Banner */
+.hobbies-scrapbook-banner {
+  background: rgba(80, 56, 80, 0.08);
+  border: 1.5px dashed var(--c-pink-medium);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+[data-theme="dark"] .hobbies-scrapbook-banner {
+  background: rgba(255, 197, 193, 0.06);
+  border-color: var(--c-pink-light);
+}
+
+.hobbies-banner-label {
+  font-family: var(--font-handwriting);
+  font-size: 1.3rem;
+  color: var(--c-purple-deep);
+  font-weight: 700;
+}
+
+[data-theme="dark"] .hobbies-banner-label {
+  color: var(--c-pink-pastel);
+}
+
+.hobbies-icons-group {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.hobby-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--theme-card-bg);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--theme-text-main);
+  box-shadow: 0 2px 6px rgba(42, 30, 30, 0.06);
+  transition: transform var(--transition-spring);
+}
+
+.hobby-pill:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+/* ==========================================================================
+   SEÇÃO 2: PROJETOS (GALERIA SCRAPBOOK)
+   ========================================================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.project-card {
+  position: relative;
+  background: var(--theme-card-bg);
+  border: 1px solid var(--theme-card-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--theme-shadow-paper);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-spring), box-shadow var(--transition-smooth);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--theme-shadow-lift);
+}
+
+/* Washi tape over each project card */
+.project-card:nth-child(1) .project-washi-tape {
+  position: absolute;
+  top: -12px;
+  right: 32px;
+  width: 90px;
+  height: 24px;
+  background: var(--c-pink-light);
+  opacity: var(--theme-washi-opacity);
+  transform: rotate(2deg);
+  border-left: 2px dashed rgba(42, 30, 30, 0.25);
+  border-right: 2px dashed rgba(42, 30, 30, 0.25);
+  z-index: 5;
+}
+
+.project-card:nth-child(2) .project-washi-tape {
+  position: absolute;
+  top: -12px;
+  left: 32px;
+  width: 90px;
+  height: 24px;
+  background: var(--c-pink-pastel);
+  opacity: var(--theme-washi-opacity);
+  transform: rotate(-2.5deg);
+  border-left: 2px dashed rgba(42, 30, 30, 0.25);
+  border-right: 2px dashed rgba(42, 30, 30, 0.25);
+  z-index: 5;
+}
+
+/* Project Screen Preview */
+.project-preview-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #190F1C;
+  border: 1px solid rgba(42, 30, 30, 0.1);
+  margin-bottom: 1.25rem;
+}
+
+.project-preview-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.project-card:hover .project-preview-wrap img {
+  transform: scale(1.04);
+}
+
+/* Project Info Content */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.65rem;
+}
+
+.project-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.project-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--theme-text-main);
+}
+
+.project-badge {
+  font-family: var(--font-pixel);
+  font-size: 0.62rem;
+  background: rgba(255, 197, 193, 0.5);
+  color: var(--c-brown-dark);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(170, 101, 129, 0.25);
+  white-space: nowrap;
+}
+
+.project-description {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--theme-text-muted);
+  flex-grow: 1;
+}
+
+/* Action Button */
+.project-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.btn-project-access {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: var(--c-purple-deep);
+  color: #FFFFFF;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(80, 56, 80, 0.22);
+  transition: all var(--transition-spring);
+}
+
+.btn-project-access:hover {
+  background: var(--c-brown-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(42, 30, 30, 0.3);
+}
+
+[data-theme="dark"] .btn-project-access {
+  background: var(--c-pink-medium);
+  box-shadow: 0 4px 14px rgba(170, 101, 129, 0.3);
+}
+
+[data-theme="dark"] .btn-project-access:hover {
+  background: var(--c-pink-light);
+  color: var(--c-brown-dark);
+}
+
+/* Future Projects Card (Prepared for adding new projects) */
+.project-future-card {
+  position: relative;
+  background: rgba(255, 248, 249, 0.5);
+  border: 2px dashed rgba(170, 101, 129, 0.4);
+  border-radius: var(--radius-md);
+  padding: 2.2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  min-height: 380px;
+  transition: all var(--transition-smooth);
+}
+
+[data-theme="dark"] .project-future-card {
+  background: rgba(33, 21, 28, 0.5);
+  border-color: rgba(249, 159, 169, 0.35);
+}
+
+.project-future-card:hover {
+  border-color: var(--c-pink-medium);
+  background: rgba(255, 197, 193, 0.15);
+  transform: translateY(-3px);
+}
+
+.future-icon-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--c-pink-pastel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 12px rgba(42, 30, 30, 0.08);
+  animation: pulse-soft 3s infinite ease-in-out;
+}
+
+.future-card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--theme-text-main);
+}
+
+.future-card-text {
+  font-family: var(--font-handwriting);
+  font-size: 1.25rem;
+  color: var(--theme-text-muted);
+  max-width: 280px;
+}
+
+/* ==========================================================================
+   SEÇÃO 3: CONTATO (CARTÃO POSTAL SCRAPBOOK)
+   ========================================================================== */
+.contact-section-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-postcard {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  background: var(--theme-card-bg);
+  border: 1px solid var(--theme-card-border);
+  border-radius: var(--radius-md);
+  padding: 2.8rem 2.8rem 2.4rem;
+  box-shadow: var(--theme-shadow-paper);
+  transform: rotate(-0.5deg);
+  transition: transform var(--transition-spring), box-shadow var(--transition-smooth);
+}
+
+.contact-postcard:hover {
+  transform: rotate(0deg) scale(1.01);
+  box-shadow: var(--theme-shadow-lift);
+}
+
+/* Top Corner Postage Stamp & Cancel Mark */
+.postcard-stamp-wrap {
+  position: absolute;
+  top: 1.75rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.postcard-stamp-img {
+  width: 65px;
+  height: 78px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(42, 30, 30, 0.12));
+  transform: rotate(3deg);
+  cursor: pointer;
+  transition: transform var(--transition-spring);
+}
+
+.postcard-stamp-img:hover {
+  transform: rotate(12deg) scale(1.1);
+}
+
+.postmark-seal {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--c-purple-deep);
+  border: 1.5px dashed var(--c-purple-deep);
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-15deg);
+  opacity: 0.75;
+}
+
+[data-theme="dark"] .postmark-seal {
+  color: var(--c-pink-light);
+  border-color: var(--c-pink-light);
+}
+
+/* Postcard Content */
+.postcard-message-area {
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.postcard-greeting {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--theme-text-main);
+  margin-bottom: 0.75rem;
+}
+
+.postcard-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--theme-text-muted);
+}
+
+/* Postcard Actions (E-mail & GitHub) */
+.postcard-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.contact-action-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(255, 197, 193, 0.2);
+  border: 1.5px dashed rgba(170, 101, 129, 0.35);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-spring);
+}
+
+.contact-action-card:hover {
+  background: var(--c-pink-pastel);
+  border-style: solid;
+  border-color: var(--c-pink-medium);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .contact-action-card {
+  background: rgba(80, 56, 80, 0.25);
+  border-color: rgba(249, 159, 169, 0.3);
+}
+
+[data-theme="dark"] .contact-action-card:hover {
+  background: rgba(170, 101, 129, 0.35);
+  border-color: var(--c-pink-light);
+}
+
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-type-label {
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  color: var(--c-pink-medium);
+  letter-spacing: 0.5px;
+}
+
+[data-theme="dark"] .contact-type-label {
+  color: var(--c-pink-light);
+}
+
+.contact-value-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--theme-text-main);
+}
+
+.contact-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: var(--c-purple-deep);
+  color: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(80, 56, 80, 0.2);
+  transition: transform var(--transition-spring), background var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.contact-action-card:hover .contact-btn-icon {
+  transform: scale(1.15) rotate(10deg);
+  background: var(--c-brown-dark);
+}
+
+/* ==========================================================================
+   FOOTER (RODAPÉ SCRAPBOOK)
+   ========================================================================== */
+.scrapbook-footer {
+  position: relative;
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  z-index: 2;
+  border-top: 1px dashed rgba(170, 101, 129, 0.2);
+  margin-top: 3rem;
+}
+
+.footer-scrapbook-note {
+  font-family: var(--font-handwriting);
+  font-size: 1.35rem;
+  color: var(--theme-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.footer-copy {
+  font-family: var(--font-pixel);
+  font-size: 0.68rem;
+  color: var(--theme-text-muted);
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE DAS NOVAS SEÇÕES
+   ========================================================================== */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .experience-scrapbook-card,
+  .interests-scrapbook-card {
+    transform: none;
+  }
+
+  .postcard-stamp-wrap {
+    position: static;
+    margin-bottom: 1.5rem;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 640px) {
+  .scrapbook-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .section-heading {
+    font-size: 2.2rem;
+  }
+
+  .section-subheading {
+    font-size: 1.25rem;
+  }
+
+  .about-note-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .about-text-lead {
+    font-size: 1.02rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-postcard {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .postcard-greeting {
+    font-size: 1.5rem;
+  }
+
+  .postcard-links-grid {
+    grid-template-columns: 1fr;
+  }
+}

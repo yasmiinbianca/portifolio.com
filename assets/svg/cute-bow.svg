@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" fill="none">
+  <!-- Cute Pink Ribbon Bow with sticker border -->
+  <g filter="drop-shadow(0px 4px 6px rgba(42,30,30,0.2))">
+    <!-- Bow Loops White Outline -->
+    <path d="M60 48 C45 28 15 20 15 38 C15 54 44 54 58 50 C48 70 30 92 35 94 C42 96 56 68 60 56 C64 68 78 96 85 94 C90 92 72 70 62 50 C76 54 105 54 105 38 C105 20 75 28 60 48 Z" 
+          fill="#FFFFFF" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    
+    <!-- Left Loop -->
+    <path d="M58 48 C42 26 18 24 18 38 C18 50 44 51 58 48 Z" fill="#F99FA9"/>
+    <!-- Left Loop Shade -->
+    <path d="M48 35 C35 32 24 34 24 40 C24 45 38 46 50 45 Z" fill="#AA6581" opacity="0.6"/>
+
+    <!-- Right Loop -->
+    <path d="M62 48 C78 26 102 24 102 38 C102 50 76 51 62 48 Z" fill="#F99FA9"/>
+    <!-- Right Loop Shade -->
+    <path d="M72 35 C85 32 96 34 96 40 C96 45 82 46 70 45 Z" fill="#AA6581" opacity="0.6"/>
+
+    <!-- Left Ribbon Tail -->
+    <path d="M58 51 C48 68 34 90 38 92 C42 93 54 68 59 55 Z" fill="#F99FA9"/>
+    <path d="M52 64 C46 74 39 86 40 88 C42 89 49 73 54 66 Z" fill="#AA6581" opacity="0.4"/>
+
+    <!-- Right Ribbon Tail -->
+    <path d="M62 51 C72 68 86 90 82 92 C78 93 66 68 61 55 Z" fill="#F99FA9"/>
+    <path d="M68 64 C74 74 81 86 80 88 C78 89 71 73 66 66 Z" fill="#AA6581" opacity="0.4"/>
+
+    <!-- Center Knot -->
+    <rect x="54" y="42" width="12" height="14" rx="4" fill="#FFFFFF"/>
+    <rect x="55" y="43" width="10" height="12" rx="3" fill="#AA6581"/>
+    <ellipse cx="60" cy="49" rx="3.5" ry="4" fill="#F99FA9"/>
+  </g>
+</svg>

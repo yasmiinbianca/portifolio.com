@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- Cute 5-petal flower with white sticker border -->
+  <g filter="drop-shadow(0px 3px 4px rgba(42,30,30,0.15))">
+    <!-- White border sticker outline -->
+    <circle cx="40" cy="20" r="16" fill="#FFFFFF"/>
+    <circle cx="58" cy="33" r="16" fill="#FFFFFF"/>
+    <circle cx="51" cy="55" r="16" fill="#FFFFFF"/>
+    <circle cx="29" cy="55" r="16" fill="#FFFFFF"/>
+    <circle cx="22" cy="33" r="16" fill="#FFFFFF"/>
+    
+    <!-- Pink Petals -->
+    <circle cx="40" cy="20" r="13" fill="#F99FA9"/>
+    <circle cx="58" cy="33" r="13" fill="#F99FA9"/>
+    <circle cx="51" cy="55" r="13" fill="#F99FA9"/>
+    <circle cx="29" cy="55" r="13" fill="#F99FA9"/>
+    <circle cx="22" cy="33" r="13" fill="#F99FA9"/>
+
+    <!-- Center core in pastel yellow with cute border -->
+    <circle cx="40" cy="40" r="12" fill="#FFFFFF"/>
+    <circle cx="40" cy="40" r="10" fill="#FFF275"/>
+    <circle cx="37" cy="38" r="2.5" fill="#FFE040"/>
+  </g>
+</svg>
